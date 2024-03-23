@@ -1,30 +1,34 @@
-import { useState } from "react"
+import { useState } from 'react'
+import './App.css'
 
 function App() {
-  let [count , setCounter] = useState(0)
-  
-  const addValue = () =>{
-    count = count + 1
-    setCounter(count)
+  const [count, setCount] = useState(0)
+
+  function incValue(){
+    // // count = count+1
+    // setCount(count + 1)
+    // setCount(count + 1)
+    // setCount(count + 1)
+    // setCount(count + 1)
+
+    setCount( (prevCount) => prevCount + 1)
+    setCount( (prevCount) => prevCount + 1)
+    setCount( (prevCount) => prevCount + 1)
+    setCount( (prevCount) => prevCount + 1)
   }
   
-  const decreaseValue = () =>{
-    count = count -1 
-    setCounter(count)
+  function decValue(){
+    setCount(count-1)
   }
   return (
     <>
-      <h1>Me and React</h1>
-      <h2>Counter Value :{count} </h2>
+      <h1>UseState counter</h1>
       <button 
-        onClick={addValue}>
-        Add Value
-      </button>
+      onClick={incValue}>Increase Value</button>
       <br/>
-      <button 
-        onClick={decreaseValue}>
-        Decrease Value
-      </button>
+      <button
+      onClick={decValue}>DecreaseValue</button>
+      <p>Counter value : {count}</p>
     </>
   )
 }
