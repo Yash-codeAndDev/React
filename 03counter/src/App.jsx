@@ -1,34 +1,40 @@
 import { useState } from 'react'
+
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function App() 
+{
+  let [counter, setCounter] = useState(15)
 
-  function incValue(){
-    // // count = count+1
-    // setCount(count + 1)
-    // setCount(count + 1)
-    // setCount(count + 1)
-    // setCount(count + 1)
 
-    setCount( (prevCount) => prevCount + 1)
-    setCount( (prevCount) => prevCount + 1)
-    setCount( (prevCount) => prevCount + 1)
-    setCount( (prevCount) => prevCount + 1)
+  const addValue = () => {
+    
+    counter = counter + 1
+    setCounter(counter)
+    // console.log("Clicked", counter)
   }
-  
-  function decValue(){
-    setCount(count-1)
+
+  const DecrementValue = () => {
+    setCounter(counter-1)
+    // console.log("Clicked", counter)
   }
   return (
     <>
-      <h1>UseState counter</h1>
-      <button 
-      onClick={incValue}>Increase Value</button>
+      <h1>Learning About Hooks In React</h1>
+      <h2>Counter Value : {counter} </h2>
+
+      <button
+      onClick={addValue}
+      >
+        Add Value {counter}
+      </button>
       <br/>
       <button
-      onClick={decValue}>DecreaseValue</button>
-      <p>Counter value : {count}</p>
+        onClick={DecrementValue}
+      >
+        Decrement Value {counter}
+      </button>
+      <p>footer : {counter}</p>
     </>
   )
 }

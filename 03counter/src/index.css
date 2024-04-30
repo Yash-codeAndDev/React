@@ -28,8 +28,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #212121;
-  color: #fff;
 }
 
 h1 {
@@ -47,7 +45,6 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin-bottom: 1.5rem;
 }
 button:hover {
   border-color: #646cff;
