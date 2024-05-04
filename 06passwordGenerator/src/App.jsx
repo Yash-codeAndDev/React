@@ -37,15 +37,15 @@ function App() {
   } ,[password])
   return (
     <>
-     <div className="max-w-md mx-auto mt-10 bg-gray-800 rounded-lg p-6 text-white">
-      <h2 className="text-center text-2xl font-bold mb-4">Password Generator</h2>
-      <div className="flex rounded-lg overflow-hidden mb-4">
+     <div className="max-w-md p-6 mx-auto mt-10 text-white bg-gray-800 rounded-lg">
+      <h2 className="mb-4 text-2xl font-bold text-center">Password Generator</h2>
+      <div className="flex mb-4 overflow-hidden rounded-lg">
         <input
           type="text"
           value={password}
           placeholder="Enter password here"
           readOnly
-          className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:bg-gray-900"
+          className="w-full px-4 py-2 text-white bg-gray-700 rounded-md focus:outline-none focus:bg-gray-900"
           ref={passwordRef}
           
         />
@@ -56,8 +56,8 @@ function App() {
           Copy
         </button>
       </div>
-      <div className='flex text-sm gap-x-2 text-orange-300'  >
-        <div className='flex items-center gap-x-1'>
+      <div className='flex text-sm text-orange-300 gap-x-2'  >
+        <div className='flex items-center gap-x-1 '>
           <input 
             type='range'
             min={6}
